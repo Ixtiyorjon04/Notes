@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+<!--    <ScrollView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#171c26">
+
+
+            <ImageView
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDateTime"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"/>
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:padding="5sp"
+                android:text="@string/date"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintEnd_toStartOf="@+id/btnOK"
+                app:layout_constraintStart_toEndOf="@+id/btnCancel"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <ImageView
+                android:id="@+id/btnOK"
+                android:layout_width="0dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:background="?selectableItemBackgroundBorderless"
+                android:backgroundTint="@color/white"
+                android:clickable="true"
+                android:src="@drawable/donecheck"
+                app:layout_constraintBottom_toBottomOf="@+id/tvDateTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.333"
+                app:tint="@color/white" />
+
+            <com.chinalwb.are.AREditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:gravity="end|start"
+                android:ems="10"
+                android:textColor="@color/white"
+               android:padding="5dp"
+           android:textColorHint="@color/white"
+                android:backgroundTint="#171c26"
+                android:hint="@string/title_hint"
+                android:inputType="textPersonName|textMultiLine|textCapSentences"
+                android:maxLines="2"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars="vertical"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateTime" />
+
+            <com.chinalwb.are.AREditText
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+
+                android:layout_height="200dp"
+                android:layout_marginTop="8dp"
+                android:background="@null"
+                android:ems="0"
+                android:padding="5dp"
+                android:gravity="end|start"
+                android:hint="@string/description_hint"
+               android:textColorHint="@color/white"
+                android:textColor="@color/white"
+                android:backgroundTint="#171c26"
+                android:inputType="textShortMessage|textMultiLine|textCapSentences"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:scrollbars="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editTitle" />
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/checkBoxImportant"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginEnd="40dp"-->
+<!--                android:text="@string/important_text"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="@color/purple_200"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/checkBoxIdea" />-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/checkBoxIdea"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="24dp"-->
+<!--                android:layout_marginBottom="15dp"-->
+<!--                android:text="@string/idea_text"-->
+<!--                 android:padding="5dp"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:textColor="@color/black"-->
+<!--               android:background="@color/purple_200"-->
+
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="0.096"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/editDescription"-->
+<!--                app:layout_constraintVertical_bias="0.054" />-->
+
+<!--            <CheckBox-->
+<!--                android:id="@+id/checkBoxTodo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/todo_text"-->
+<!--                android:backgroundTint="@color/white"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:background="@color/purple_200"-->
+<!--                app:layout_constraintEnd_toStartOf="@+id/checkBoxImportant"-->
+<!--                app:layout_constraintStart_toEndOf="@+id/checkBoxIdea"-->
+<!--                app:layout_constraintTop_toTopOf="@+id/checkBoxIdea" />-->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bottombar"
+                android:layout_width="400dp"
+                android:layout_height="49dp"
+                android:textColor="@color/white"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+             android:layout_marginEnd="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent">
+
+                <com.chinalwb.are.styles.toolbar.ARE_ToolbarDefault
+                    android:id="@+id/areToolbar"
+                    android:layout_width="343dp"
+                    android:layout_height="60dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/white"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:background="@color/purple_200"
+                    android:gravity="center_vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="9"
+                    android:backgroundTint="@color/white"
+                    android:textColorHint="@color/black"
+                    android:textColor="@color/black"
+                    android:background="@color/purple_200"
+                    android:gravity="center"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/arrow"
+                        android:layout_width="30dp"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_baseline_arrow_forward_24" />
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--            <Button-->
+<!--                android:layout_width="415dp"-->
+<!--                android:layout_height="734dp"-->
+<!--                android:visibility="invisible"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintHorizontal_bias="1.0"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+
+<!--                />-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    </ScrollView>-->
+</layout>

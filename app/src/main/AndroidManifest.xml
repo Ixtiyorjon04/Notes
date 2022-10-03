@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="uz.gita.notes">
+
+    <application
+        android:name="uz.gita.notes.App"
+        android:requestLegacyExternalStorage="true"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Notes">
+        <activity android:name="uz.gita.notes.MainActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustResize"
+            android:screenOrientation="sensorPortrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name="uz.gita.notes.ui.DeletedNotesActivity"
+            android:parentActivityName="uz.gita.notes.MainActivity"
+            android:label="@string/deleted_notes"
+            android:theme="@style/Theme.Notes.ActionBar"
+            android:screenOrientation="sensorPortrait">
+        </activity>
+        <activity android:name="uz.gita.notes.ui.screens.NewNoteActivity"
+            android:screenOrientation="sensorPortrait">
+
+        </activity>
+
+        <activity android:name="uz.gita.notes.ui.screens.EditNoteActivity"
+            android:screenOrientation="sensorPortrait">
+
+        </activity>
+
+
+
+        <activity android:name="uz.gita.notes.ui.MainIntroActivity"
+            android:screenOrientation="sensorPortrait">
+
+        </activity>
+    </application>
+
+</manifest>
